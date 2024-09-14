@@ -2,7 +2,7 @@ const url = 'https://yahoo-weather5.p.rapidapi.com/weather?format=json&u=f&locat
 const options = {
     method: 'GET',
     headers: {
-        'x-rapidapi-key': '095e3c98d8mshb572dcf05ed3cc8p1ac232jsn313634946522',
+        'x-rapidapi-key': 'b0f8c73fb1msh58f0a8680a7159fp10d036jsna2857b6bc6b7',
         'x-rapidapi-host': 'yahoo-weather5.p.rapidapi.com'
     }
 };
@@ -56,13 +56,13 @@ btn.addEventListener("click", async () => {
                     highs[i].innerText = res.forecasts[i].high;
                     lows[i].innerText = res.forecasts[i].low;
                 }
-                for (let i = 0; i < 6; i++) {
+                for (let i = 0; i < 7; i++) {
                     txt[i].innerText = res.forecasts[i].text;
                 }
 
                 hum.innerText = res.current_observation.atmosphere.humidity;
                 vis.innerText = res.current_observation.atmosphere.visibility;
-                mainContent.classList.remove('animate-pulse');
+
             });
         })
         .then(() => {
@@ -112,4 +112,5 @@ btn.addEventListener("click", async () => {
         .catch((err) => {
             console.log(err);
         });
+    mainContent.classList.remove('animate-pulse');
 });

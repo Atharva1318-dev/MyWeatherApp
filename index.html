@@ -9,24 +9,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="p-0 m-0">
-    <div id="main w-screen">
+<body class="p-0 m-0" style="font-family: 'Roboto', sans-serif">
+    <div id="main" class="w-screen">
         <nav class="sticky top-0 z-10 flex items-center justify-between w-full py-3 bg-[#5EB6FA] text-white">
             <h1 class="text-lg sm:text-2xl pl-6 md:pl-10 lg:pl-14 font-bold ">MyWeather</h1>
             <div class="flex items-center mr-12 sm:mr-52 md:mr-40 lg:mr-56 xl:mr-[550px]">
                 <input
-                    class="w-full overflow-x-scroll text-xs sm:text-normal lg:text-base sm:w-52 md:w-68 xl:w-72 h-[1.85rem] ml-2 border-2 border-gray-500 rounded-3xl p-3.5 shadow-lg shadow-sky-700 text-[#08090a] bg-gradient-to-b from-sky-100 to-sky-50"
+                    class="w-full overflow-x-scroll text-xs sm:text-normal lg:text-base sm:w-52 md:w-68 xl:w-72 h-[1.85rem] ml-2 border-1 border-gray-500 rounded-l-3xl p-3.5 shadow-lg shadow-sky-700 text-[#08090a] bg-gradient-to-b from-sky-100 to-sky-50"
                     type="text" placeholder="Search city">
-                <button class="ml-1 text-xs sm:text-normal lg:text-base border-2 border-neutral-800 rounded-2xl px-1 py-0.5 md:px-2
-                    text-neutral-800 shadow-lg shadow-sky-700 hover:scale-105 transition-all
-                    duration-105">Search</button>
+                <i class="fa-solid text-xs sm:text-normal lg:text-base xl:text-xl  h-[1.85rem] rounded-r-3xl px-3 pt-1.5 sm:py-0.5 text-neutral-800 fa-magnifying-glass
+                     shadow-lg shadow-sky-700 bg-gradient-to-b from-sky-100 to-sky-50" id="search"></i>
             </div>
         </nav>
         <div id="main-content" class="overflow-scroll w-full bg-gradient-to-t from-[#f4faff] to-sky-100">
@@ -34,15 +32,16 @@
             <div class="flex flex-wrap justify-evenly w-screen p-8 bg-transparent">
                 <div
                     class="m-2 p-2 shadow-xl hover:scale-105 transition-all duration-105 linear flex-col w-full sm:w-52 h-60 bg-gradient-to-t from-sky-200 to-sky-50 rounded-xl shadow-[#08090a]">
-                    <p class="text-md py-1.5 mx-3.5 text-[#08090a]">Date</span>
-                        <span class="text-base ml-1 text-[#08090a] time">Time</span>
+                    <p class="py-1.5">
+                        <span class="text-md text-[#08090a] mx-3.5 CurrDate">Date</span>
+                        <span class="text-base text-[#08090a] ml-1 time">Time</span>
                     </p>
                     <hr class="h-0.5 bg-sky-400">
                     <div class="mt-3 flex">
                         <p class="animate-pulse Temp text-7xl text-[#08090a]">
                             --
                         <div class="w-4 h-4 mt-3 bg-transparent border-2 rounded-full border-[#08090a]"></div>
-                        <p class="text-2xl mt-1.5 ml-1.5 text-[#08090a]">F</p>
+                        <p class="text-3xl mt-1 ml-1.5 text-[#08090a]">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-xl px-1 mb-1 text-neutral-800">
@@ -67,14 +66,14 @@
                     <div class="flex mx-3 mt-3 p-1">
                         <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
                             --
-                        <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full -[#08090a]"></div>
-                        <p class="text-sm mt-1 ml-1 text-[#08090a]">F</p>
+                        <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
+                        <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -97,7 +96,7 @@
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -114,13 +113,13 @@
                         <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
-                        <p class="text-sm mt-1 ml-1 text-[#08090a]">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -137,13 +136,13 @@
                         <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
-                        <p class="text-sm mt-1 ml-1 text-[#08090a]">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -160,13 +159,13 @@
                         <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
-                        <p class="text-sm mt-1 ml-1 text-[#08090a]">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -183,13 +182,13 @@
                         <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
-                        <p class="text-sm mt-1 ml-1 text-[#08090a]">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
                         <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
-                        <p class="text-sm mt-1 ml-1 text-neutral-600">F</p>
+                        <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
                         </p>
                     </div>
                     <p class="Txt font-normal text-md p-1 text-neutral-800">
@@ -271,7 +270,7 @@
                 </div>
             </div>
         </div>
-        <footer class="h-full bg-gray-800 text-gray-400 py-4">
+        <footer class="h-full bg-gray-800 text-gray-400 py-8">
             <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-2 md:mb-0 text-center md:text-left">
                     <h1 class="text-xl font-bold text-white">MyWeather</h1>
@@ -299,5 +298,4 @@
     </div>
     <script src="app.js"></script>
 </body>
-
 </html>
