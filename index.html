@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+
 </head>
 
 <body class="p-0 m-0" style="font-family: 'Roboto', sans-serif">
@@ -24,7 +26,7 @@
                     class="w-full overflow-x-scroll text-xs sm:text-normal lg:text-base sm:w-52 md:w-68 xl:w-72 h-[1.85rem] ml-2 border-1 border-gray-500 rounded-l-3xl p-3.5 shadow-lg shadow-sky-700 text-[#08090a] bg-gradient-to-b from-sky-100 to-sky-50"
                     type="text" placeholder="Search city">
                 <i class="fa-solid text-xs sm:text-normal lg:text-base xl:text-xl  h-[1.85rem] rounded-r-3xl px-3 pt-1.5 sm:py-0.5 text-neutral-800 fa-magnifying-glass
-                     shadow-lg shadow-sky-700 bg-gradient-to-b from-sky-100 to-sky-50" id="search"></i>
+                    shadow-lg shadow-sky-700 bg-gradient-to-b from-sky-100 to-sky-50" id="search"></i>
             </div>
         </nav>
         <div id="main-content" class="overflow-scroll w-full bg-gradient-to-t from-[#f4faff] to-sky-100">
@@ -38,13 +40,15 @@
                     </p>
                     <hr class="h-0.5 bg-sky-400">
                     <div class="mt-3 flex">
-                        <p class="animate-pulse Temp text-7xl text-[#08090a]">
+                        <p class="CurrTemp text-7xl text-[#08090a]">
                             --
                         <div class="w-4 h-4 mt-3 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-3xl mt-1 ml-1.5 text-[#08090a]">F</p>
                         </p>
+                        <i class="text-2xl ml-0.5 pl-2 sm:pl-4 md:ml-0.5 md:pl-4 lg:pl-6 py-1"
+                            id="curr-weather-icon"></i>
                     </div>
-                    <p class="Txt font-normal text-xl px-1 mb-1 text-neutral-800">
+                    <p class="CurrTxt font-normal text-xl px-1 mb-1 text-neutral-800">
 
                     </p>
                     <hr class="h-0.5 w-4/5 mx-auto bg-sky-400">
@@ -63,14 +67,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-3 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -86,14 +91,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-3 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -109,14 +115,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-3 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -132,14 +139,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-3 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -155,14 +163,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-3 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -178,14 +187,15 @@
                         Day
                     </p>
                     <hr class="h-0.5 bg-sky-400">
-                    <div class="flex mx-3 mt-2 p-1">
-                        <p class="TempHigh animate-pulse Temp text-lg text-[#08090a]">
+                    <i class="text-3xl px-2.5 sm:px-6 md:px-8 lg:px-10 py-2" id="weather-icon"></i>
+                    <div class="flex mx-3 mt-1 p-1">
+                        <p class="TempHigh animate-pulse text-xl text-[#08090a]">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-sm mt-0.5 ml-1 text-[#08090a]">F</p>
                         </p>
                         <span class="text-2xl mr-0.5 text-[#08090a]">/ </span>
-                        <p class="TempLow animate-pulse Temp text-lg text-neutral-600">
+                        <p class="TempLow animate-pulse text-xl text-neutral-600">
                             --
                         <div class="w-1 h-1 mt-2 bg-transparent border-2 rounded-full border-neutral-600"></div>
                         <p class="text-sm mt-0.5 ml-1 text-neutral-600">F</p>
@@ -212,6 +222,8 @@
                         <div class="w-3 h-3 mt-1 ml-0.5 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-2xl text-[#08090a]">F</p>
                         </p>
+                        <i class="text-2xl ml-0.5 pl-2 sm:pl-4 md:ml-0.5 md:pl-4 lg:pl-6 py-1"
+                            id="delhi-weather-icon"></i>
                     </div>
                     <p class="DelhiTxt font-normal text-lg mt-1 p-1 text-neutral-800">
 
@@ -229,6 +241,8 @@
                         <div class="w-3 h-3 mt-1 ml-0.5 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-2xl text-neutral-900">F</p>
                         </p>
+                        <i class="text-2xl ml-0.5 pl-2 sm:pl-4 md:ml-0.5 md:pl-4 lg:pl-6 py-1"
+                            id="kol-weather-icon"></i>
                     </div>
                     <p class="KolTxt CurrTxt font-normal text-lg mt-1 p-1 text-neutral-800">
 
@@ -246,6 +260,8 @@
                         <div class="w-3 h-3 mt-1 ml-0.5 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-2xl text-neutral-900">F</p>
                         </p>
+                        <i class="text-2xl ml-0.5 pl-2 sm:pl-4 md:ml-0.5 md:pl-4 lg:pl-6 py-1"
+                            id="pune-weather-icon"></i>
                     </div>
                     <p class="PuneTxt CurrTxt font-normal text-lg mt-1 p-1 text-neutral-800">
 
@@ -263,6 +279,8 @@
                         <div class="w-3 h-3 mt-1 ml-0.5 bg-transparent border-2 rounded-full border-[#08090a]"></div>
                         <p class="text-2xl text-neutral-900">F</p>
                         </p>
+                        <i class="text-2xl ml-0.5 pl-2 sm:pl-4 md:ml-0.5 md:pl-4 lg:pl-6 py-1"
+                            id="chen-weather-icon"></i>
                     </div>
                     <p class="ChenTxt CurrTxt font-normal text-lg mt-1 p-1 text-neutral-800">
 
@@ -298,4 +316,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
