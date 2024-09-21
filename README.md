@@ -1,3 +1,5 @@
+![Real-Time Weather Data for Mumbai](./assets/Screenshot%202024-09-15%20at%205.26.32 PM.png)
+
 # MyWeatherApp
 
 MyWeather is a dynamic weather forecasting web application built using HTML, Tailwind CSS, and JavaScript. It fetches real-time weather data and displays it in a responsive and visually appealing interface.
